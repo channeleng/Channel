@@ -1,0 +1,25 @@
+{
+  "title": "",
+  "description": "",
+  "feedUrl": "",
+  "siteUrl": "",
+  "imageUrl": "",
+  "docs": "",
+  "author": "",
+  "copyright": "",
+  "language": "en",
+  "categories": [],
+  "pubDate": "",
+  "ttl": 60,
+  "itunesImage": "",
+  "itunesAuthor": "",
+  "itunesSubtitle": "",
+  "itunesSummary": "",
+  "itunesOwner": { "name": "", "email": "" },
+  "itunesExplicit": false,
+  "itunesCategory": [
+    {
+      "text": "Society & Culture"
+    }
+  ]
+}

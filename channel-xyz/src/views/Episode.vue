@@ -1,0 +1,296 @@
+<template>
+    <div class="episode">
+        <div :if="episode">
+            <div class="content">
+                <div class="MediaPlayer">
+                    <MediaPlayer :imageSrc="imageCid" :audioSrc="mediaCid" />
+                </div>
+                <div class="info">
+                    <Badge
+                        v-if="profile && profile.value"
+                        :badge="badgeImg"
+                        :address="creatorAddress"
+                        :name="author"
+                        :bio="badgeBio"
+                    />
+                    <div class="details">
+                        <div class="author">
+                            <router-link
+                                v-if="creatorAddress"
+                                :to="{
+                                    name: 'Profile',
+                                    params: { address: creatorAddress },
+                                }"
+                            >
+                                {{ author }}
+                            </router-link>
+                        </div>
+                        <h5>
+                            {{ date }}
+                            <svg
+                                class="headphones"
+                                version="1.1"
+                                id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 209.8876953 224.9896851"
+                                style="
+                                    enable-background: new 0 0 209.8876953
+                                        224.9896851;
+                                "
+                                xml:space="preserve"
+                            >
+                                <g>
+                                    <path
+                                        class="st0"
+                                        d="M190.9074402,142.923111c-0.4552155,0.0803223-0.9104309,0.1606445-1.3656464,0.2409821 c-8.525177-10.2091675-18.1254883-18.2046127-32.250412-19.3107681 c-9.5793457-0.7501984-11.5169373-0.4768982-16.5199432,8.0225143c-1.432373,2.4334259-2.7019043,4.9829102-3.8242493,7.5752411 c-5.804245,13.4061127-9.5527802,27.4497528-10.7689056,41.9384918 c-0.8711395,10.378418-0.7649078,20.9399109,0.0666504,31.3267517c0.6130981,7.6577911,2.9696198,9.0757294,10.393631,10.3859711 c2.9528046,0.5211334,5.8829956,1.2617035,8.8576813,1.552475c17.3300629,1.693924,31.9950409-2.8361511,41.9484558-18.2178192 c0.7838593-1.2113647,1.694519-2.6238556,2.9038391-3.2335815c14.6192017-7.3707886,18.9855347-21.9449768,10.8860779-36.2364502 c-0.8193665-1.445755-0.9963684-3.4507751-0.9266815-5.1742249c0.5450745-13.4807129,1.1333923-26.9616241,1.9703979-40.4261856 c0.1087494-1.7494049,1.6805725-3.4232483,2.6283875-5.1017532c1.7222137-3.0498428,5.0880432-6.1361542,4.9783478-9.1041489 c-0.9282074-25.1128845-6.6126404-48.8704414-22.8126831-68.9550476 C159.3169403,3.7946916,110.3997192-9.2419472,67.3734665,6.8240705 C22.0307541,23.7550545,2.139904,60.6461601,0.0123138,106.6514664c-0.194808,4.2123718,1.9393387,7.1287994,5.1585579,9.7023468 c1.3823738,1.1051102,2.5834541,3.2563934,2.692028,5.0053101c0.8358974,13.4646378,1.4727058,26.9441757,1.9276981,40.4273148 c0.0717392,2.1259308-0.6527348,4.5469055-1.7427368,6.3998718c-6.5642853,11.1590881-1.8353634,29.2492523,8.8644619,34.1790771 c2.4944153,1.1492767,4.9126282,3.1484375,6.5468674,5.3614197c6.9900742,9.4654541,15.7631989,15.9336395,27.7906342,16.4981232 c6.7354813,0.3160858,13.5872879,0.0553131,20.2691193-0.8314209c10.0817108-1.3379059,11.2741852-2.9055023,13.0269852-13.1073151 c0.2813187-1.6373444,0.4751892-3.3026276,0.5431061-4.961792c0.9418716-23.0102081-3.2059097-45.1306305-12.1542816-66.2924347 c-1.9158478-4.5307465-4.8288345-8.7255859-7.8067017-12.6804123c-1.2389374-1.645401-4.0696945-3.454422-5.8021774-3.1381073 c-9.1426392,1.6691589-19.1360779,0.6854858-26.5129128,8.4176407c-3.8264008,4.0106964-8.3834686,7.324295-13.6094208,11.8103638 c0-8.4151917-0.0360336-16.3139725,0.0522118-24.2113953c0.0094872-0.8491364,0.5253372-2.1717529,1.1712837-2.4617462 c7.8806763-3.5380096,9.233036-10.6301041,10.4403076-18.078537c4.4257011-27.305069,18.879673-47.4962158,44.9106026-57.2481422 c27.3168564-10.2336731,53.9185257-7.5668297,77.4940872,10.8481941 c15.7302856,12.2870331,23.927887,29.1322403,26.4656067,48.813591c0.8247681,6.3964539,2.9962921,11.9306488,9.2412872,15.0575943 c0.8551178,0.4281616,1.8296967,1.6744461,1.8452301,2.5578308 C190.9658966,126.784935,190.9074402,134.8545227,190.9074402,142.923111z"
+                                    ></path>
+                                    <path
+                                        d="M190.9074402,142.923111c0-8.0685883,0.0584564-16.138176-0.0832825-24.2042694 c-0.0155334-0.8833847-0.9901123-2.1296692-1.8452301-2.5578308c-6.2449951-3.1269455-8.4165192-8.6611404-9.2412872-15.0575943 c-2.5377197-19.6813507-10.735321-36.5265579-26.4656067-48.813591 c-23.5755615-18.4150238-50.1772308-21.0818672-77.4940872-10.8481941 C49.7470169,51.1935577,35.293045,71.3847046,30.8673439,98.6897736 c-1.2072716,7.4484329-2.5596313,14.5405273-10.4403076,18.078537c-0.6459465,0.2899933-1.1617966,1.6126099-1.1712837,2.4617462 c-0.0882454,7.8974228-0.0522118,15.7962036-0.0522118,24.2113953c5.2259521-4.4860687,9.78302-7.7996674,13.6094208-11.8103638 c7.3768349-7.7321548,17.3702736-6.7484818,26.5129128-8.4176407c1.7324829-0.3163147,4.5632401,1.4927063,5.8021774,3.1381073 c2.9778671,3.9548264,5.8908539,8.1496658,7.8067017,12.6804123c8.9483719,21.1618042,13.0961533,43.2822266,12.1542816,66.2924347 c-0.0679169,1.6591644-0.2617874,3.3244476-0.5431061,4.961792c-1.7528,10.2018127-2.9452744,11.7694092-13.0269852,13.1073151 c-6.6818314,0.886734-13.533638,1.1475067-20.2691193,0.8314209c-12.0274353-0.5644836-20.80056-7.0326691-27.7906342-16.4981232 c-1.6342392-2.2129822-4.0524521-4.2121429-6.5468674-5.3614197c-10.6998253-4.9298248-15.4287472-23.019989-8.8644619-34.1790771 c1.0900021-1.8529663,1.814476-4.273941,1.7427368-6.3998718c-0.4549923-13.483139-1.0918007-26.962677-1.9276981-40.4273148 c-0.1085739-1.7489166-1.3096542-3.9001999-2.692028-5.0053101c-3.2192192-2.5735474-5.3533659-5.489975-5.1585579-9.7023468 C2.139904,60.6461601,22.0307541,23.7550545,67.3734665,6.8240705 c43.0262527-16.0660172,91.9434738-3.0293789,119.6989212,31.381485 c16.2000427,20.08461,21.8844757,43.8421669,22.8126831,68.9550476c0.1096954,2.9679947-3.256134,6.054306-4.9783478,9.1041489 c-0.9478149,1.6785049-2.5196381,3.3523483-2.6283875,5.1017532c-0.8370056,13.4645615-1.4253235,26.9454727-1.9703979,40.4261856 c-0.0696869,1.7234497,0.1073151,3.7284698,0.9266815,5.1742249c8.0994568,14.2914734,3.7331238,28.8656616-10.8860779,36.2364502 c-1.2093201,0.609726-2.1199799,2.0222168-2.9038391,3.2335815c-9.9534149,15.3816681-24.6183929,19.9117432-41.9484558,18.2178192 c-2.9746857-0.2907715-5.9048767-1.0313416-8.8576813-1.552475c-7.4240112-1.3102417-9.7805328-2.7281799-10.393631-10.3859711 c-0.8315582-10.3868408-0.9377899-20.9483337-0.0666504-31.3267517 c1.2161255-14.488739,4.9646606-28.5323792,10.7689056-41.9384918c1.122345-2.5923309,2.3918762-5.1418152,3.8242493-7.5752411 c5.003006-8.4994125,6.9405975-8.7727127,16.5199432-8.0225143c14.1249237,1.1061554,23.725235,9.1016006,32.250412,19.3107681 C189.9970093,143.0837555,190.4522247,143.0034332,190.9074402,142.923111z"
+                                    ></path>
+                                </g>
+                            </svg>
+                            {{ duration }}
+                        </h5>
+                    </div>
+                    <h2>{{ title }}</h2>
+                    <p
+                        class="description"
+                        v-html="stripEmptyTags(description)"
+                    ></p>
+                </div>
+            </div>
+            <div v-if="creatorEpisodes">
+                <h3>More from this channel</h3>
+                <Grid :tiles="creatorEpisodes" />
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import { mapState } from "vuex";
+import moment from "moment";
+import MediaPlayer from "../components/MediaPlayer.vue";
+import Grid from "../components/Grid.vue";
+import Badge from "../components/Badge.vue";
+
+export default {
+    name: "Episode",
+    components: {
+        MediaPlayer,
+        Grid,
+        Badge,
+    },
+    data() {
+        return {
+            address: "",
+            loading: false,
+            index: 0,
+            profile: null,
+        };
+    },
+    watch: {
+        episode: function () {
+            const that = this;
+            fetch(`/api/profiles/${this.creatorAddress}`)
+                .then((res) => res.json())
+                .then(function (data) {
+                    if (data.length) {
+                        const reversed = data.reverse();
+                        that.profile = reversed[0];
+                    } else {
+                        that.profile = data;
+                    }
+                })
+                .catch((err) => {
+                    console.log("error:", err);
+                });
+        },
+    },
+    computed: {
+        ...mapState(["episode", "creatorEpisodes", "profiles"]),
+        creatorAddress() {
+            return this.episode["value"]
+                ? this.episode.value.creatorAddress
+                : "";
+        },
+        author() {
+            return this.episode["value"] ? this.episode.value.author : "";
+        },
+        title() {
+            return this.episode["value"] ? this.episode.value.title : "";
+        },
+        description() {
+            return this.episode["value"] ? this.episode.value.description : "";
+        },
+        date() {
+            return this.episode["value"]
+                ? moment(this.episode.value.pubDate).format("DD MMM Y")
+                : moment(Date.now()).format("DD MMM Y");
+        },
+        duration() {
+            return this.episode["value"]
+                ? Math.round(this.episode.value.duration / 1000 / 60) + "min"
+                : "0min";
+        },
+        mediaCid() {
+            return this.episode["value"]
+                ? process.env.VUE_APP_BUCKET + this.episode.value.mediaCid
+                : "";
+        },
+        imageCid() {
+            return this.episode["value"]
+                ? process.env.VUE_APP_BUCKET + this.episode.value.imageCid
+                : require("../assets/img/channel-avatar.jpeg");
+        },
+        badgeBio() {
+            return this.profile && this.profile["value"]
+                ? this.profile.value.bio
+                : "";
+        },
+        badgeImg() {
+            if (
+                this.profile &&
+                this.profile["value"] &&
+                this.profile.value["address"] &&
+                this.profile.value["imageCid"]
+            ) {
+                return (
+                    process.env.VUE_APP_BUCKET + this.profile.value["imageCid"]
+                );
+            } else {
+                return require("../assets/img/channel-avatar.jpeg");
+            }
+        },
+    },
+    methods: {
+        loadNextPage() {
+            if (!this.$route.path.includes("/episode/")) return;
+            this.loading = true;
+            this.$store.dispatch("getEpisodesByCreator", {
+                offset: process.env.VUE_APP_PAGE_LIMIT * this.index,
+                address: this.creatorAddress,
+            });
+            this.index++;
+            this.loading = false;
+        },
+        checkScroll(e) {
+            const el = e.target.activeElement;
+            if (window.pageYOffset + el.clientHeight >= el.scrollHeight) {
+                this.loadNextPage();
+            }
+        },
+        stripEmptyTags(e) {
+            const el = e.replaceAll("<p><br></p>", "");
+            return el;
+        },
+    },
+    mounted() {
+        const cid = this.$route.params.cid;
+        this.$store.dispatch("resetCreatorEpisodes");
+        this.$store
+            .dispatch("getEpisode", cid)
+            .then(() => {
+                // Detect when scrolled to bottom.
+                document.addEventListener("scroll", (e) => this.checkScroll(e));
+
+                // Initially load some items.
+                this.loadNextPage();
+            })
+            .catch((err) => {
+                console.log("Could not get episode.");
+            });
+    },
+    beforeUnmount() {
+        document.removeEventListener("scroll", (e) => this.checkScroll(e));
+    },
+    unmounted() {},
+};
+</script>
+
+<style scoped>
+h2 {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+h3 {
+    text-align: center;
+}
+h5 {
+    padding: 0 10px;
+}
+p {
+    text-align: left;
+}
+
+p a {
+    color: var(--purple) !important;
+}
+.headphones {
+    margin-left: 10px;
+    width: 10px;
+    fill: black;
+}
+.content {
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0% auto 0 auto;
+}
+.info {
+    min-width: 550px;
+    max-width: 58%;
+    padding: 0 0 0 30px;
+    text-align: center;
+}
+.details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 0px 5px 0px;
+    text-transform: uppercase;
+}
+.author a {
+    color: var(--purple);
+}
+.subscribeButton {
+    display: inline-block;
+    background: var(--purple);
+    color: white;
+    position: relative;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 4px 0 23px 0;
+    padding: 12px 15px;
+    cursor: pointer;
+}
+.subscribeButton:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 960px) {
+    .content {
+        flex-direction: column;
+        padding: 0 0 5% 0;
+        max-width: 100%;
+    }
+    .info {
+        min-width: auto;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .info .badge {
+        display: none;
+    }
+}
+.MediaPlayer {
+    margin-top: 30px;
+}
+</style>

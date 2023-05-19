@@ -1,0 +1,61 @@
+{
+  "name": "channel-xyz",
+  "version": "0.1.6",
+  "private": true,
+  "scripts": {
+    "serve": "cross-env NODE_OPTIONS='--openssl-legacy-provider' vue-cli-service serve",
+    "serve-prod": "yarn build; python3 -m http.server --directory ./dist 8080",
+    "build": "cross-env NODE_OPTIONS='--openssl-legacy-provider' vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@vuepic/vue-datepicker": "^3.5.3",
+    "@vueup/vue-quill": "^1.0.0-beta.10",
+    "buffer": "^6.0.3",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.3",
+    "crypto-js": "^4.1.1",
+    "ethers": "^5.7.1",
+    "moment": "^2.29.4",
+    "react-query": "^3.39.2",
+    "source-map-loader": "^4.0.1",
+    "vagmi": "^0.1.20",
+    "vue": "^3.0.0",
+    "vue-router": "4",
+    "vue3-clipboard": "^1.0.0",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.8",
+    "@vue/cli-plugin-eslint": "~5.0.8",
+    "@vue/cli-service": "~5.0.8",
+    "@vue/compiler-sfc": "^3.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "vue/setup-compiler-macros": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {
+      "vue/multi-word-component-names": 0,
+      "no-unused-vars": 0
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

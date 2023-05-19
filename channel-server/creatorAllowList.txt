@@ -1,0 +1,5 @@
+# Creator Allow List
+# Remove these comments before use
+# List allowed creators wallet addresses here, one per line
+# ie:
+# 0xDBC05B1ECB4FDAEF943819C0B04E9EF6DF4BABD6

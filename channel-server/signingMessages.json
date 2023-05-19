@@ -1,0 +1,7 @@
+{
+  "signForRSSLink" : "Sign this message to receive your RSS Link from Channel.xyz.\n\nThis request will not trigger a blockchain transaction or cost any gas fees.\n\nWallet address:\n{{address}}\n\nNonce:\n{{nonce}}",
+  "signForMedia" : "Sign this message to listen to this Media directly on Channel.xyz.\n\nThis request will not trigger a blockchain transaction or cost any gas fees.\n\nWallet address:\n{{address}}\n\nNonce:\n{{nonce}}",
+  "signForEpisodeCreate" : "Sign this message to CREATE a new Episode on Channel.xyz\n\nThis request will not trigger a blockchain transaction or cost any gas fees.\n\nWallet address:\n{{address}}\n\nNonce:\n{{nonce}}",
+  "signForEpisodeDelete" : "Sign this message to DELETE this Episode on Channel.xyz. Be aware this action is irreversable and the episode will be deleted forever.\n\nThis request will not trigger a blockchain transaction or cost any gas fees.\n\nWallet address:\n{{address}}\n\nNonce:\n{{nonce}}",
+  "signForProfileUpdate" : "Sign this message to UPDATE your Profile on Channel.xyz\n\nThis request will not trigger a blockchain transaction or cost any gas fees.\n\nWallet address:\n{{address}}\n\nNonce:\n{{nonce}}"
+}
