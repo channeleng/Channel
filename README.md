@@ -1,6 +1,6 @@
 # Channel
 
-Channel.xyz is a token-auth podcast publishing platform.
+Channel is an ERC-721-gated RSS feed with a backend for uploading media and serving RSS links per token holders.
 
 This repository contains the two main components of the platform.
 
@@ -8,9 +8,9 @@ This repository contains the two main components of the platform.
 
 [channel-server] interacts with the blockchain and smart contracts in order to view, modify, and authenticate content.
 
-# Channel-XYZ
+## Channel-XYZ
 
-[channel-xyz] Channel web front end.
+[channel-xyz] Channel front end web app.
 
 ## License
 
