@@ -6,11 +6,11 @@ This repository contains the two main components of the platform.
 
 ## Channel Server
 
-[channel-server] interacts with the blockchain and smart contracts in order to view, modify, and authenticate content.
+[channel-server](channel-server) interacts with the blockchain and smart contracts in order to view, modify, and authenticate content.
 
 ## Channel-XYZ
 
-[channel-xyz] Channel front end web app.
+[channel-xyz](channel-xyz) Channel front end web app.
 
 ## License
 
